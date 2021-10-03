@@ -3,26 +3,36 @@ class Vehicle {
     int wheels;
     int ms;
     int bu;
+
+    Vehicle(int pass, int wheels, int ms, int bu) {
+        this.pass = pass;
+        this.wheels = wheels;
+        this.ms = ms;
+        this.bu = bu;
+    }
+
     double calc_speed(double time){
         double distance = ms * time;
         return distance;
+    }
+
+    void print(double time){
+        System.out.println("Passengers: " + pass);
+        System.out.println("Wheels: " + wheels);
+        System.out.println("Max speed: " + ms);
+        System.out.println("Burn up: " + bu);
+        System.out.println("Distance " + calc_speed(time) + " to " + time + " hours");
     }
 }
 
 public class Demo {
     public static void main(String[] args){
-        Vehicle a1 = new Vehicle();
-        Vehicle a2 = new Vehicle();
-        Vehicle dist = new Vehicle();
-        a1.ms = 100;
-        a1.pass = 50;
-        a2.ms = 180;
-        a2.pass = 5;
+        Vehicle a1 = new Vehicle(5, 4, 180, 9);
+        Vehicle a2 = new Vehicle(50,4, 90, 20);
         double time = 0.5;
-        double d;
-        d = a1.calc_speed(time);
-        System.out.println("Bus distance " + d);
-        d = a2.calc_speed(time);
-        System.out.println("Car distance " + d);
+        double dist;
+        dist = a1.calc_speed(time);
+        a1.print(time);
+        a2.print(time);
     }
 }
