@@ -2,15 +2,16 @@
 #include <stdlib.h>
 
 int checkToUpdate() {
-  system("git add .");
+  system("git add test.txt");
   system("git commit -m Update");
   system("git push");
+  printf("Done!\n");
   return 0;
 
 }
 
 int main() {
-    int checkToUpdate();
+    int check = checkToUpdate();
     printf("Exit ...\n");
     return 0;
 }
