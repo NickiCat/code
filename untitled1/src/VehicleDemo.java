@@ -3,11 +3,14 @@ class VehicleD {
     int wheels;
     double max_speed;
     double burn_up;
-    VehicleD() {
+    /*VehicleD() {
         passengers = 5;
         wheels = 4;
         max_speed = 90;
         burn_up = 10;
+    }*/
+    VehicleD() {
+        this(5,4,90,10);
     }
     VehicleD(int passengers, int wheels, double max_speed, double burn_up) {
         this.passengers = passengers;
